@@ -45,7 +45,7 @@ class OnBoarding extends StatelessWidget {
                   height: 9,
                 ),
                 Text(
-                  'Kalau kamu baca buku nanti kamu jadi\fganteng rill no hoax mah kata gweh',
+                  'Project ini dibuat dalam rangka\fbelajar lebih dalam soal mobile programming',
                   style: blackTextStyle.copyWith(
                     fontSize: 12,
                   ),

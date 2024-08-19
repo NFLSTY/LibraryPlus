@@ -1,4 +1,4 @@
-import 'package:libraryplus/pages/profilePage.dart';
+import 'package:libraryplus/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:libraryplus/theme.dart';
@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     if (index == 2) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const Profilepage()),
+        MaterialPageRoute(builder: (context) => const ProfilePage()),
       );
     } else {
       _selectedIndexNotifier.value = index;
@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Profilepage()));
+                                      builder: (context) => ProfilePage()));
                             },
                             child: Container(
                               width: 40,
@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                                 width: 2,
                               ),
                               Text(
-                                'Ricki',
+                                'Naufal',
                                 style: whiteTextStyle.copyWith(
                                   fontSize: 16,
                                   fontWeight: semiBold,

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:libraryplus/pages/login_page.dart';
 import 'package:libraryplus/theme.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Profilepage extends StatelessWidget {
-  const Profilepage({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class Profilepage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child: Text(
-                      'Halo Ricki',
+                      'Halo Naufal S',
                       style: blackTextStyle.copyWith(
                         fontSize: 25,
                       ),
@@ -180,7 +181,7 @@ class Profilepage extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 60),
                 child: ElevatedButton(
                   onPressed: () {
-                    SystemNavigator.pop();
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red,
@@ -197,7 +198,7 @@ class Profilepage extends StatelessWidget {
                               20), // Adds space between the icon and the text
                       Text(
                         'Keluar',
-                        style: TextStyle(fontSize: 17, color: Colors.white),
+                        style: TextStyle(fontSize: 17, color: Colors.white), 
                       ),
                     ],
                   ),
