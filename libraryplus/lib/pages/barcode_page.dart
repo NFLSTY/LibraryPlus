@@ -11,7 +11,7 @@ class DataPage extends StatelessWidget {
       body: ListView(
         children: const [
           Padding(
-            padding: EdgeInsets.only(left: 15),
+            padding: EdgeInsets.only(left: 20),
             child: SizedBox(
               width: 20,
               height: 20,
