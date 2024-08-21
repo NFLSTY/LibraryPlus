@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:libraryplus/pages/login_page.dart';
 import 'package:libraryplus/theme.dart';
-import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProfilePage extends StatelessWidget {
