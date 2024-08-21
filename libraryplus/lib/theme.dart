@@ -19,14 +19,17 @@ TextStyle title1 = GoogleFonts.poppins(
   fontWeight: semiBold,
   fontSize: 50,
 );
+
 TextStyle title2 = GoogleFonts.poppins(
   color: textColor2,
   fontWeight: semiBold,
   fontSize: 50,
 );
+
 TextStyle blackTextStyle = GoogleFonts.poppins(
   color: textColor3,
 );
+
 TextStyle whiteTextStyle = GoogleFonts.poppins(
   color: textColor4,
 );
