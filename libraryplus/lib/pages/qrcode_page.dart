@@ -8,25 +8,16 @@ class DataPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor3,
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(
               height: 100,
             ),
-            Text(
-              'LibraryPlus',
-              style: TextStyle(
-                fontSize: 40,
-                backgroundColor: Colors.black,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
+            Image.asset(
+              'assets/nim.png',
             ),
-            SizedBox(
-              height: 64,
-            )
           ],
         ),
       ),
