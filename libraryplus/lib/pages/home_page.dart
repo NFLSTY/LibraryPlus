@@ -1,7 +1,7 @@
 import 'package:libraryplus/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:libraryplus/pages/barcode_page.dart';
+import 'package:libraryplus/pages/qrcode_page.dart';
 import 'package:libraryplus/theme.dart';
 import 'package:libraryplus/widgets/home_book_items.dart';
 import 'package:libraryplus/widgets/home_menu_items.dart';
@@ -30,8 +30,7 @@ class _HomePageState extends State<HomePage> {
       Navigator.push(
         context, 
         MaterialPageRoute(builder: (context) => const ProfilePage()));
-    }
-    else {
+    } else {
       _selectedIndexNotifier.value = index;
     }
   }
