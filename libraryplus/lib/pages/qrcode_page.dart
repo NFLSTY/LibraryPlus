@@ -46,7 +46,6 @@ class DataPage extends StatelessWidget {
                         )),
                     child: const Icon(
                       Icons.home_sharp,
-                      size: 30,
                       color: Colors.white,
                     ),
                   )
