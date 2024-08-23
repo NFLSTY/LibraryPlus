@@ -12,16 +12,30 @@ class DataPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Expanded(
               child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Image.asset(
-                'assets/nim.png',
-                fit: BoxFit.contain,
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Image.asset(
+                  'assets/nim.png',
+                  height: 350,
+                  width: 350,
+                ),
               ),
+            ),
+            const SizedBox(
+              height: 100,
+              width: 100,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.settings,
+                    size: 50,
+                  )
+                ],
               ),
             ),
           ],

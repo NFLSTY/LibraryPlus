@@ -87,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
             height: 20,
           ),
           if (_isErrorVisible)
-            Text(
+            const Text(
               'NIM atau Password Anda Salah, Coba Lagi!',
               style: TextStyle(
                 color: Colors.red,
