@@ -61,18 +61,18 @@ class OnBoarding extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => LoginPage()),
                     );
                   },
-                  child: Text(
-                    'Get Started',
-                    style: whiteTextStyle.copyWith(
-                      fontSize: 15,
-                      fontWeight: semiBold,
-                    ),
-                  ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: backgroundColor2,
                     minimumSize: Size(256, 40),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(26),
+                    ),
+                  ),
+                  child: Text(
+                    'Get Started',
+                    style: whiteTextStyle.copyWith(
+                      fontSize: 15,
+                      fontWeight: semiBold,
                     ),
                   ),
                 )
