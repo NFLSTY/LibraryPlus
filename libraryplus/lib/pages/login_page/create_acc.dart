@@ -10,11 +10,11 @@ class CreateAcc extends StatefulWidget {
 }
 
 class _CreateAccState extends State<CreateAcc> {
+  final _formState = GlobalKey<FormState>();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _nimController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  bool _isErrorVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -32,144 +32,146 @@ class _CreateAccState extends State<CreateAcc> {
             ),
           ),
           SizedBox(
-            height: 29,
-          ),
-          //Input Name box
-          const Text(
-            'Nama Lengkap',
-            style: TextStyle(
-              color: Colors.black,
-              fontStyle: FontStyle.normal,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          TextField(
-            controller: _nameController,
-            decoration: InputDecoration(
-              enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(14),
-                  borderSide: BorderSide(color: Colors.white)),
-              filled: true,
-              fillColor: Colors.white,
-              hintText: '*wajib diisi',
-              hintStyle: TextStyle(
-                color: textColor1,
-                fontStyle: FontStyle.italic,
-                fontSize: 15,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          //Input NIM box
-          const Text(
-            'Nomor Induk Mahasiswa',
-            style: TextStyle(
-              color: Colors.black,
-              fontStyle: FontStyle.normal,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          TextField(
-            controller: _nimController,
-            decoration: InputDecoration(
-              enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(14),
-                  borderSide: BorderSide(color: Colors.white)),
-              filled: true,
-              fillColor: Colors.white,
-              hintText: '*wajib diisi',
-              hintStyle: TextStyle(
-                color: textColor1,
-                fontStyle: FontStyle.italic,
-                fontSize: 15,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          //Input AMIKOM E-mail
-          const Text(
-            'E-mail AMIKOM',
-            style: TextStyle(
-              color: Colors.black,
-              fontStyle: FontStyle.normal,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          TextField(
-            controller: _emailController,
-            decoration: InputDecoration(
-              enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(14),
-                  borderSide: BorderSide(color: Colors.white)),
-              filled: true,
-              fillColor: Colors.white,
-              hintText: '*wajib diisi',
-              hintStyle: TextStyle(
-                color: textColor1,
-                fontStyle: FontStyle.italic,
-                fontSize: 15,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          //Input App Password
-          const Text(
-            'Password Aplikasi',
-            style: TextStyle(
-              color: Colors.black,
-              fontStyle: FontStyle.normal,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          TextField(
-            controller: _passwordController,
-            decoration: InputDecoration(
-              enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(14),
-                  borderSide: BorderSide(color: Colors.white)),
-              filled: true,
-              fillColor: Colors.white,
-              hintText: '*wajib diisi',
-              hintStyle: TextStyle(
-                color: textColor1,
-                fontStyle: FontStyle.italic,
-                fontSize: 15,
-              ),
-            ),
-          ),
-          SizedBox(
             height: 50,
           ),
-          ElevatedButton(
-              onPressed: () {
-                if (_nameController.text == '' &&
-                    _nimController.text == '' &&
-                    _emailController.text == '' &&
-                    _passwordController.text == '') {
-                  setState(() {
-                    _isErrorVisible = true;
-                  });
-                } else {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
-                }
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: textColor1,
-                minimumSize: Size(256, 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(14),
+          Form(
+            key: _formState,
+            child: Column(
+              children: [
+                //Input Name 
+                const Text(
+                  'Nama Lengkap',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
+                TextFormField(
+                  controller: _nameController,
+                  validator: (value) {
+                    if (value == '') {
+                      return "Nama tidak boleh kosong!";
+                    }
+                  },
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(14),
+                        borderSide: BorderSide(color: Colors.white)),
+                    filled: true,
+                    fillColor: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                //Input NIM 
+                const Text(
+                  'Nomor Induk Mahasiswa',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                TextFormField(
+                  controller: _nimController,
+                  validator: (value) {
+                    if (value == '') {
+                      return "NIM tidak boleh kosong!";
+                    }
+                  },
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(14),
+                        borderSide: BorderSide(color: Colors.white)),
+                    filled: true,
+                    fillColor: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                //Input AMIKOM E-mail
+                const Text(
+                  'E-mail AMIKOM',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                TextFormField(
+                  controller: _emailController,
+                  validator: (value) {
+                    if (value == '') {
+                      return "Email tidak boleh kosong!";
+                    }
+                  },
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(14),
+                        borderSide: BorderSide(color: Colors.white)),
+                    filled: true,
+                    fillColor: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                //Input App Password
+                const Text(
+                  'Password Aplikasi',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                TextFormField(
+                  controller: _passwordController,
+                  validator: (value) {
+                    if (value == '') {
+                      return "Password tidak boleh kosong!";
+                    }
+                  },
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(14),
+                        borderSide: BorderSide(color: Colors.white)),
+                    filled: true,
+                    fillColor: Colors.white,
+                  ),
+                ),
+              ],
+            )
+          ),
+          SizedBox(
+            height: 70,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              if (_formState.currentState!.validate()) {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+              }
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: textColor1,
+              minimumSize: Size(256, 50),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(14),
               ),
-              child: Text(
-                'Konfirmasi',
-                style: TextStyle(color: backgroundColor1, fontSize: 20, fontWeight: semiBold),
-              ))
+            ),
+            child: Text(
+              'Konfirmasi',
+              style: TextStyle(
+                color: backgroundColor1, 
+                fontSize: 20, 
+                fontWeight: semiBold
+              ),
+            )
+          )
         ],
       ),
     );

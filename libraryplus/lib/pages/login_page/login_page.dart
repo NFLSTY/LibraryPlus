@@ -125,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
               )
             ),
             SizedBox(
-              height: 100,
+              height: 200,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -135,7 +135,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: blackTextStyle.copyWith(
                     color: textColor2,
                     fontSize: 10,
-                    fontWeight: semiBold,
+                    fontWeight: medium,
                   ),
                 ),
                 TextButton(

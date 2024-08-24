@@ -27,6 +27,9 @@ class DataPage extends StatelessWidget {
               ),
             ),
             SizedBox(
+              height: 50,
+            ),
+            SizedBox(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -52,9 +55,6 @@ class DataPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              height: 100,
-            )
           ],
         ),
       ),
