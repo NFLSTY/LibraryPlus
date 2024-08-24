@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:libraryplus/pages/login_page.dart';
+import 'package:libraryplus/pages/login_page/login_page.dart';
 import 'package:libraryplus/theme.dart';
 
 class OnBoarding extends StatelessWidget {

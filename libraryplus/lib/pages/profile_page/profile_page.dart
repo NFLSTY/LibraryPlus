@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:libraryplus/pages/login_page.dart';
+import 'package:libraryplus/pages/login_page/login_page.dart';
 import 'package:libraryplus/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -50,11 +50,11 @@ class ProfilePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     const Icon(
-                      Icons.person_add_alt_1_rounded,
+                      Icons.person,
                       size: 26,
                     ),
                     SizedBox(width: 8),
-                    Text('Tambahkan Akun',
+                    Text('Informasi Akun',
                         style: blackTextStyle.copyWith(fontSize: 18)),
                     Spacer(),
                     const Icon(

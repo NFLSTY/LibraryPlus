@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:libraryplus/pages/home_page.dart';
+import 'package:libraryplus/pages/home_page/home_page.dart';
 import 'package:libraryplus/theme.dart';
 
 class DataPage extends StatelessWidget {
@@ -22,8 +21,8 @@ class DataPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Image.asset(
                   'assets/nim.png',
-                  height: 300,
-                  width: 300,
+                  height: 400,
+                  width: 400,
                 ),
               ),
             ),
@@ -38,11 +37,12 @@ class DataPage extends StatelessWidget {
                     style: ButtonStyle(
                         shape: WidgetStatePropertyAll(CircleBorder()),
                         padding: WidgetStatePropertyAll(EdgeInsets.all(25)),
-                        backgroundColor: WidgetStatePropertyAll(Colors.blue),
+                        backgroundColor: WidgetStatePropertyAll(Color(0xff7752FE)),
                         overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
                             if (states.contains(WidgetState.pressed)) {
                               return Colors.red;
-                            }},
+                            }
+                            return null;},
                         )),
                     child: const Icon(
                       Icons.home_sharp,

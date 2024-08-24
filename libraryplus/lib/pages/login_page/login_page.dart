@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:libraryplus/pages/home_page.dart';
+import 'package:libraryplus/pages/home_page/home_page.dart';
+import 'package:libraryplus/pages/login_page/create_acc.dart';
 import 'package:libraryplus/theme.dart';
 
 class LoginPage extends StatefulWidget {
@@ -46,10 +47,6 @@ class _LoginPageState extends State<LoginPage> {
             controller: _nimController,
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(14),
-                borderSide: BorderSide(color: Colors.white),
-              ),
-              focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(14),
                 borderSide: BorderSide(color: Colors.white),
               ),
@@ -125,7 +122,37 @@ class _LoginPageState extends State<LoginPage> {
                     color: backgroundColor1,
                     fontSize: 20,
                     fontWeight: semiBold),
-              ))
+              )
+            ),
+            SizedBox(
+              height: 100,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Belum Punya Akun?',
+                  style: blackTextStyle.copyWith(
+                    color: textColor2,
+                    fontSize: 10,
+                    fontWeight: semiBold,
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => CreateAcc()));
+                  }, 
+                  child: const Text(
+                    'Buat Akun',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold
+                    ),
+                  )
+                )
+              ],
+            )
         ],
       ),
     );
