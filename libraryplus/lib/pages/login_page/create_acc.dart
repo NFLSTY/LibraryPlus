@@ -32,123 +32,117 @@ class _CreateAccState extends State<CreateAcc> {
             ),
           ),
           SizedBox(
-            height: 50,
+            height: 70,
           ),
-          Form(
-            key: _formState,
-            child: Column(
-              children: [
-                //Input Name 
-                const Text(
-                  'Nama Lengkap',
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontStyle: FontStyle.normal,
-                    fontWeight: FontWeight.bold,
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Form(
+              key: _formState,
+              child: Column(
+                children: [
+                  //Input Name 
+                  const Text(
+                    'Nama Lengkap',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                TextFormField(
-                  controller: _nameController,
-                  validator: (value) {
-                    if (value == '') {
-                      return "Nama tidak boleh kosong!";
-                    }
-                  },
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(14),
-                        borderSide: BorderSide(color: Colors.white)),
-                    filled: true,
-                    fillColor: Colors.white,
+                  TextFormField(
+                    controller: _nameController,
+                    validator: (value) {
+                      if (value == value!.split("").join("")) {
+                        return "Nama tidak boleh kosong!";
+                      }
+                    },
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(14),
+                          borderSide: BorderSide(color: Colors.white)),
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                //Input NIM 
-                const Text(
-                  'Nomor Induk Mahasiswa',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontStyle: FontStyle.normal,
-                    fontWeight: FontWeight.bold,
+                  SizedBox(
+                    height: 40,
                   ),
-                ),
-                TextFormField(
-                  controller: _nimController,
-                  validator: (value) {
-                    if (value == '') {
-                      return "NIM tidak boleh kosong!";
-                    }
-                  },
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(14),
-                        borderSide: BorderSide(color: Colors.white)),
-                    filled: true,
-                    fillColor: Colors.white,
+                  //Input NIM 
+                  const Text(
+                    'Nomor Induk Mahasiswa',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                //Input AMIKOM E-mail
-                const Text(
-                  'E-mail AMIKOM',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontStyle: FontStyle.normal,
-                    fontWeight: FontWeight.bold,
+                  TextFormField(
+                    controller: _nimController,
+                    validator: (value) {
+                      if (value == value!.split("").join("")) {
+                        return "NIM tidak boleh kosong!";
+                      }
+                    },
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(14),
+                          borderSide: BorderSide(color: Colors.white)),
+                    ),
                   ),
-                ),
-                TextFormField(
-                  controller: _emailController,
-                  validator: (value) {
-                    if (value == '') {
-                      return "Email tidak boleh kosong!";
-                    }
-                  },
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(14),
-                        borderSide: BorderSide(color: Colors.white)),
-                    filled: true,
-                    fillColor: Colors.white,
+                  SizedBox(
+                    height: 40,
                   ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                //Input App Password
-                const Text(
-                  'Password Aplikasi',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontStyle: FontStyle.normal,
-                    fontWeight: FontWeight.bold,
+                  //Input AMIKOM E-mail
+                  const Text(
+                    'E-mail AMIKOM',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                TextFormField(
-                  controller: _passwordController,
-                  validator: (value) {
-                    if (value == '') {
-                      return "Password tidak boleh kosong!";
-                    }
-                  },
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(14),
-                        borderSide: BorderSide(color: Colors.white)),
-                    filled: true,
-                    fillColor: Colors.white,
+                  TextFormField(
+                    controller: _emailController,
+                    validator: (value) {
+                      if (value == value!.split("").join("")) {
+                        return "Email tidak boleh kosong!";
+                      }
+                    },
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(14),
+                          borderSide: BorderSide(color: Colors.white)),
+                    ),
                   ),
-                ),
-              ],
-            )
+                  SizedBox(
+                    height: 40,
+                  ),
+                  //Input App Password
+                  const Text(
+                    'Password Aplikasi',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextFormField(
+                    controller: _passwordController,
+                    validator: (value) {
+                      if (value == value!.split("").join("")) {
+                        return "Password tidak boleh kosong!";
+                      }
+                    },
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(14),
+                          borderSide: BorderSide(color: Colors.white)), 
+                    ),
+                  ),
+                ],
+              )
+            ),
           ),
           SizedBox(
-            height: 70,
+            height: 90,
           ),
           ElevatedButton(
             onPressed: () {
