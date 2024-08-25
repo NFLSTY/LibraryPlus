@@ -1,3 +1,4 @@
+import 'package:libraryplus/pages/home_page/book_page.dart';
 import 'package:libraryplus/pages/profile_page/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -234,7 +235,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => BookPage()));
+                      },
                       child: Text(
                         'Lihat Semua',
                         style: blackTextStyle.copyWith(
