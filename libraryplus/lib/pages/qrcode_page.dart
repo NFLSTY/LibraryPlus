@@ -29,32 +29,25 @@ class DataPage extends StatelessWidget {
             SizedBox(
               height: 50,
             ),
-            SizedBox(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
-                    },
-                    style: ButtonStyle(
-                        shape: WidgetStatePropertyAll(CircleBorder()),
-                        padding: WidgetStatePropertyAll(EdgeInsets.all(25)),
-                        backgroundColor: WidgetStatePropertyAll(Color(0xff7752FE)),
-                        overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
-                            if (states.contains(WidgetState.pressed)) {
-                              return Colors.red;
-                            }
-                            return null;},
-                        )),
-                    child: const Icon(
-                      Icons.home_sharp,
-                      color: Colors.white,
-                    ),
-                  )
-                ],
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+              }, 
+              style: ButtonStyle(
+                shape: WidgetStatePropertyAll(CircleBorder()),
+                padding: WidgetStatePropertyAll(EdgeInsets.all(25)),
+                backgroundColor: WidgetStatePropertyAll(Color(0xff7752FE)),
+                overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
+                  if (states.contains(WidgetState.pressed)) {
+                    return Colors.red;
+                  }
+                  return null;
+                })
               ),
-            ),
+              child: const Icon(
+                Icons.home_sharp,
+                color: Colors.white,
+              ))
           ],
         ),
       ),
