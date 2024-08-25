@@ -55,7 +55,7 @@ class _CreateAccState extends State<CreateAcc> {
                     TextFormField(
                       controller: _nameController,
                       validator: (value) {
-                        if (value == value!.split("").join("")) { //avoid null input by double spacebar
+                        if (value == null || value.trim().isEmpty) { // Properly check for empty values
                           return "Nama tidak boleh kosong!";
                         }
                         return null; // Add a return statement to handle the case when no value is returned.
@@ -64,8 +64,7 @@ class _CreateAccState extends State<CreateAcc> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(14),
                             borderSide: const BorderSide(
-                                color: Colors
-                                    .white)), // Add the 'const' keyword to improve performance.
+                                color: Colors.white)), 
                       ),
                     ),
                     SizedBox(
@@ -86,7 +85,7 @@ class _CreateAccState extends State<CreateAcc> {
                     TextFormField(
                       controller: _nimController,
                       validator: (value) {
-                        if (value == value!.split("").join("")) {
+                        if (value == null || value.trim().isEmpty) {
                           return "NIM tidak boleh kosong!";
                         }
                         return null;
@@ -115,7 +114,7 @@ class _CreateAccState extends State<CreateAcc> {
                     TextFormField(
                       controller: _emailController,
                       validator: (value) {
-                        if (value == value!.split("").join("")) {
+                        if (value == null || value.trim().isEmpty) {
                           return "Email tidak boleh kosong!";
                         }
                         return null;
@@ -144,7 +143,7 @@ class _CreateAccState extends State<CreateAcc> {
                     TextFormField(
                       controller: _passwordController,
                       validator: (value) {
-                        if (value == value!.split("").join("")) {
+                        if (value == null || value.trim().isEmpty) {
                           return "Password tidak boleh kosong!";
                         }
                         return null;
