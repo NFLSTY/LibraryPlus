@@ -42,7 +42,7 @@ class _BookPageState extends State<BookPage> {
               fillColor: backgroundColor1,
               filled: true,
               prefixIcon: const Padding(
-                padding: EdgeInsets.only(left: 15),
+                padding: EdgeInsets.only(left: 15), // Adjust the position of the icon
                 child: Icon(
                 Icons.search_sharp,
                 size: 35,
