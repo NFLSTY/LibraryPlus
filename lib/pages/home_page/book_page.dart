@@ -21,13 +21,16 @@ class _BookPageState extends State<BookPage> {
       backgroundColor: backgroundColor2,
       body: ListView(
         children: [
+          SizedBox(
+            height: 21, // Give space at top
+          ),
           Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 children: [
                   Text(
                     'Cari buku',
-                    style: title1.copyWith(fontSize: 20),
+                    style: title1.copyWith(fontSize: 25),
                   )
                 ],
               )
