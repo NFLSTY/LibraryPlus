@@ -18,16 +18,13 @@ class DataPage extends StatelessWidget {
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Image.asset(
                   'assets/nim.png',
                   height: 400,
                   width: 400,
                 ),
               ),
-            ),
-            SizedBox(
-              height: 50,
             ),
             ElevatedButton(
               onPressed: () {
@@ -47,7 +44,11 @@ class DataPage extends StatelessWidget {
               child: const Icon(
                 Icons.home_sharp,
                 color: Colors.white,
-              ))
+              )
+            ),
+            SizedBox(
+              height: 100,
+            )
           ],
         ),
       ),
