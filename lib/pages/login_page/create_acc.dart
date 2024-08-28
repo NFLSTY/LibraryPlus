@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:libraryplus/pages/home_page/home_page.dart';
+import 'package:libraryplus/pages/login_page/login_page.dart';
 import 'package:libraryplus/theme.dart';
 
 class CreateAcc extends StatefulWidget {
@@ -40,9 +41,8 @@ class _CreateAccState extends State<CreateAcc> {
                 key: _formState,
                 child: Column(
                   children: [
-                    //Input Name
                     const Align(
-                      alignment: Alignment.centerLeft,
+                      alignment: Alignment.centerLeft, // Input Name
                       child: Text(
                         'Nama Lengkap',
                         style: TextStyle(
@@ -61,18 +61,14 @@ class _CreateAccState extends State<CreateAcc> {
                         return null; // Add a return statement to handle the case when no value is returned.
                       },
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(14),
-                            borderSide: const BorderSide(
-                                color: Colors.white)), 
+                        border: OutlineInputBorder(),
                       ),
                     ),
                     SizedBox(
                       height: 40,
                     ),
-                    //Input NIM
                     const Align(
-                      alignment: Alignment.centerLeft,
+                      alignment: Alignment.centerLeft, // Input NIM
                       child: Text(
                         'Nomor Induk Mahasiswa',
                         style: TextStyle(
@@ -91,17 +87,14 @@ class _CreateAccState extends State<CreateAcc> {
                         return null;
                       },
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(14),
-                            borderSide: BorderSide(color: Colors.white)),
+                        border: OutlineInputBorder(),
                       ),
                     ),
                     SizedBox(
                       height: 40,
                     ),
-                    //Input AMIKOM E-mail
                     const Align(
-                      alignment: Alignment.centerLeft,
+                      alignment: Alignment.centerLeft, // Input AMIKOM E-mail
                       child: Text(
                         'E-mail AMIKOM',
                         style: TextStyle(
@@ -120,17 +113,14 @@ class _CreateAccState extends State<CreateAcc> {
                         return null;
                       },
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(14),
-                            borderSide: BorderSide(color: Colors.white)),
+                        border: OutlineInputBorder(),
                       ),
                     ),
                     SizedBox(
                       height: 40,
                     ),
-                    //Input App Password
                     const Align(
-                      alignment: Alignment.bottomLeft,
+                      alignment: Alignment.bottomLeft, // Input App Password
                       child: Text(
                         'Password Aplikasi',
                         style: TextStyle(
@@ -149,9 +139,7 @@ class _CreateAccState extends State<CreateAcc> {
                         return null;
                       },
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(14),
-                            borderSide: BorderSide(color: Colors.white)),
+                        border: OutlineInputBorder(),
                       ),
                     ),
                   ],
@@ -176,6 +164,19 @@ class _CreateAccState extends State<CreateAcc> {
               child: Text(
                 'Konfirmasi',
                 style: TextStyle(color: backgroundColor1, fontSize: 20, fontWeight: semiBold),
+              )),
+              SizedBox(
+                height: 25,
+              ),
+              TextButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+              }, child: Text(
+                'Login',
+                style: TextStyle(
+                    color: textColor2,
+                    fontSize: 15,
+                    fontWeight: medium,
+                ),
               ))
         ],
       ),

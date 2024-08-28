@@ -132,9 +132,9 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 Text(
                   'Belum Punya Akun?',
-                  style: blackTextStyle.copyWith(
+                  style: TextStyle(
                     color: textColor2,
-                    fontSize: 10,
+                    fontSize: 14,
                     fontWeight: medium,
                   ),
                 ),
@@ -146,7 +146,7 @@ class _LoginPageState extends State<LoginPage> {
                     'Buat Akun',
                     style: TextStyle(
                       color: Colors.red,
-                      fontSize: 11,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold
                     ),
                   )
