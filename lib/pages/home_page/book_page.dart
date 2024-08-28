@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:libraryplus/pages/home_page/home_page.dart';
 import 'package:libraryplus/theme.dart';
 import 'package:flutter/services.dart';
 import 'package:libraryplus/widgets/home_book_items.dart';
@@ -83,14 +84,19 @@ class _BookPageState extends State<BookPage> {
                         fontWeight: regular,
                       ),
                     ),
-                    Text(
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                      },
+                      child: Text(
                       'Lihat Semua',
                       style: blackTextStyle.copyWith(
                         color: backgroundColor3,
                         fontSize: 12,
                         fontWeight: semiBold,
-                      ),
-                    )
+                      )
+                      )
+                    ),
                   ],
                 )
               ],
