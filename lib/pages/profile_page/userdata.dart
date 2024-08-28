@@ -30,12 +30,24 @@ class UserData extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: Text(
-                    'Naufal Satya P\n23.61.0253',
-                    style: whiteTextStyle.copyWith(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start, // Adjust text position
+                    children: [
+                      Text(
+                        'Naufal Satya P',
+                        style: whiteTextStyle.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                      Text(
+                        '23.61.0253',
+                        style: whiteTextStyle.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        )
+                      )
+                    ],
                   ),
                 )
               ],
