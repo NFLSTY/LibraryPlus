@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
     } else if (index == 1) {
       Navigator.push(
         context, 
-        MaterialPageRoute(builder: (context) => const DataPage()));
+        MaterialPageRoute(builder: (context) => const QRcodePage()));
     } else if (index == 2) {
       Navigator.push(
         context, 

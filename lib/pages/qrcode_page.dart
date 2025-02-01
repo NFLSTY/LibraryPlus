@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:libraryplus/pages/home_page/home_page.dart';
 import 'package:libraryplus/theme.dart';
 
-class DataPage extends StatelessWidget {
-  const DataPage({super.key});
+class QRcodePage extends StatelessWidget {
+  const QRcodePage({super.key});
 
   @override
   Widget build(BuildContext context) {
